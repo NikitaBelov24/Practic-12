@@ -12,3 +12,17 @@ function sinCosSum(x) {
     var result = sinValue + cosValue; // Суммируем Sin(x) и Cos(x)
     return result; // Возвращаем результат
 }
+
+// Главная функция
+function main() {
+    var number = readNumber(); // Считываем число с клавиатуры
+    if (isNaN(number)) { // Проверяем, является ли введенное значение числом
+        console.log("Ошибка: Введите корректное число!");
+        return;
+    }
+    var result = sinCosSum(number); // Вычисляем функцию Sin(x) + Cos(x)
+    console.log("Результат вычисления Sin(x) + Cos(x) при x =", number, "равен", result);
+}
+
+// Вызываем главную функцию
+main();
